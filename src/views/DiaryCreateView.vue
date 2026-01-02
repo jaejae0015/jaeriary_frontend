@@ -1,22 +1,19 @@
 <template>
-  <div>
-    <h2>새 일기</h2>
-
-    <!-- ⭐️ 핵심 -->
-    <DiaryForm
-      submitLabel="저장"
-      @submit="handleCreate"
-    />
+  <div class="page">
+    <h1>새 일기</h1>
+    <DiaryForm submitLabel="저장" @submit="create" />
   </div>
 </template>
 
 <script setup lang="ts">
 import DiaryForm from "@/components/DiaryForm.vue";
 import { createDiary } from "@/api/diary.api";
+import { useRouter } from "vue-router";
 
-const handleCreate = async (data: { title: string; content: string }) => {
-  console.log("부모에서 submit 받음:", data); // 디버깅용
+const router = useRouter();
 
-  await createDiary(data); // ✅ 실제 DB 저장
+const create = async (data: { title: string; content: string }) => {
+  await createDiary(data);
+  router.push("/");
 };
 </script>

@@ -1,9 +1,3 @@
 <template>
-  <div>
-    <h1>Jaeriary</h1>
-    <router-view />
-  </div>
+  <router-view />
 </template>
-
-<script setup lang="ts">
-</script>

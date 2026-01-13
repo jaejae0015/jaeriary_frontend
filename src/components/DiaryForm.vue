@@ -1,16 +1,7 @@
 <template>
   <form class="card" @submit.prevent="submit">
-    <input
-      v-model="form.title"
-      placeholder="제목"
-      required
-    />
-    <textarea
-      v-model="form.content"
-      placeholder="내용"
-      rows="5"
-      required
-    />
+    <input v-model="form.title" placeholder="제목" required />
+    <textarea v-model="form.content" placeholder="내용" rows="5" required />
     <button class="primary">
       {{ submitLabel }}
     </button>

@@ -2,9 +2,7 @@
   <div class="page">
     <h1>Jaeriary</h1>
 
-    <router-link to="/new" class="btn primary">
-      새 일기
-    </router-link>
+    <router-link to="/new" class="btn primary"> 새 일기 </router-link>
 
     <div v-if="diaries.length === 0" class="empty">
       아직 작성된 일기가 없습니다
@@ -15,12 +13,8 @@
       <p>{{ d.content }}</p>
 
       <div class="actions">
-        <router-link :to="`/edit/${d.id}`" class="btn">
-          수정
-        </router-link>
-        <button class="btn danger" @click="remove(d.id)">
-          삭제
-        </button>
+        <router-link :to="`/edit/${d.id}`" class="btn"> 수정 </router-link>
+        <button class="btn danger" @click="remove(d.id)">삭제</button>
       </div>
     </div>
   </div>

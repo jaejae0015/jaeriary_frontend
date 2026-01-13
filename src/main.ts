@@ -7,6 +7,4 @@ import "@/styles/layout.css";
 import "@/styles/base.css";
 import "@/styles/main.css";
 
-createApp(App)
-  .use(router)
-  .mount("#app");
+createApp(App).use(router).mount("#app");

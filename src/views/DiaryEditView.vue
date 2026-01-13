@@ -3,18 +3,9 @@
     <h2>일기 수정</h2>
 
     <form @submit.prevent="submit">
-      <input
-        v-model="title"
-        placeholder="제목"
-        required
-      />
+      <input v-model="title" placeholder="제목" required />
 
-      <textarea
-        v-model="content"
-        placeholder="내용"
-        rows="6"
-        required
-      />
+      <textarea v-model="content" placeholder="내용" rows="6" required />
 
       <div class="actions">
         <button type="submit">수정</button>

@@ -21,11 +21,9 @@ export const getDiary = async (id: number): Promise<Diary> => {
   return res.data;
 };
 
-export const createDiary = (data: DiaryRequest) =>
-  api.post("/diaries", data);
+export const createDiary = (data: DiaryRequest) => api.post("/diaries", data);
 
 export const updateDiary = (id: number, data: DiaryRequest) =>
   api.put(`/diaries/${id}`, data);
 
-export const deleteDiary = (id: number) =>
-  api.delete(`/diaries/${id}`);
+export const deleteDiary = (id: number) => api.delete(`/diaries/${id}`);
